@@ -6,6 +6,7 @@ import com.epam.springdata.entity.Gender;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -16,7 +17,8 @@ import java.util.Objects;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:test-dao-context.xml")
+@ContextConfiguration(locations = "classpath:dao-context.xml")
+@ActiveProfiles("test")
 public class DefaultDaoTest {
 
     @Resource(name = "personDao")

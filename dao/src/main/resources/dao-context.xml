@@ -17,4 +17,12 @@
     <bean id="personDao" class="com.epam.jdbc.impl.PersonDaoImpl"/>
     <bean id="peopleDao" class="com.epam.jpa.impl.PeopleDaoImpl"/>
 
+    <beans profile="test">
+        <bean id="databaseConnection" class="com.epam.jdbc.DatabaseConnection">
+            <property name="url" value="jdbc:mysql://localhost:3306/testMarket"/>
+            <property name="username" value="root"/>
+            <property name="password" value="500290"/>
+        </bean>
+    </beans>
+
 </beans>
