@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="databaseConnection" class="com.epam.jdbc.DatabaseConnection">
+        <property name="url" value="jdbc:mysql://localhost:3306/market"/>
+        <property name="username" value="root"/>
+        <property name="password" value="500290"/>
+    </bean>
+
+    <import resource="spring-data-context.xml"/>
+
+    <bean id="personDao" class="com.epam.jdbc.impl.PersonDaoImpl"/>
+    <bean id="peopleDao" class="com.epam.jpa.impl.PeopleDaoImpl"/>
+
+</beans>

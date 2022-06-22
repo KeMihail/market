@@ -1,0 +1,15 @@
+CREATE DATABASE market;
+
+CREATE TABLE user (
+	id int NOT NULL AUTO_INCREMENT,
+	firstName varchar(255) NOT NULL,
+	lastName varchar(255) NOT NULL,
+	birthday DATE NOT NULL,
+	email varchar(255) NOT NULL UNIQUE,
+	password varchar(255) NOT NULL,
+	gender enum('MAN','WOMAN') NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
+
