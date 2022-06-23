@@ -14,7 +14,10 @@
 
     <import resource="spring-data-context.xml"/>
 
-    <bean id="personDao" class="com.epam.jdbc.impl.PersonDaoImpl"/>
+    <bean id="personDao" class="com.epam.jdbc.impl.PersonDaoImpl">
+        <property name="databaseConnection" ref="databaseConnection"/>
+    </bean>
+    
     <bean id="peopleDao" class="com.epam.jpa.impl.PeopleDaoImpl"/>
 
     <beans profile="test">

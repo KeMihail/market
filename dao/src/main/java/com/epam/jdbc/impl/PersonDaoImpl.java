@@ -5,7 +5,6 @@ import com.epam.jdbc.DatabaseConnection;
 import com.epam.jdbc.entity.Person;
 import com.epam.springdata.entity.Gender;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ import java.util.List;
 
 public class PersonDaoImpl implements DefaultDao<Person> {
 
-    @Autowired
     @Setter
     private DatabaseConnection databaseConnection;
 
